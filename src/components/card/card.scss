@@ -1,0 +1,36 @@
+@import '../../styles/main.scss';
+
+.gallery {
+  
+    display:flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width:79.2%;
+    margin:auto;
+    gap:50px;
+    background-color: ($third-color);
+ 
+ 
+
+    &__card {
+        position:relative;
+   
+        width:30%;
+        height: 340px;
+        background-color: ($second-color);   
+        border-radius:10px;
+        overflow:hidden;
+
+    h3 {
+        position:absolute;
+        left:20px;
+        bottom: 20px;
+    }
+
+    }
+
+    
+    
+
+
+}

@@ -1,8 +1,14 @@
+import Header from '../../components/header';
+
 function Survey() {
   return (
     <div>
-      <h1>Questionnaire 🧮 test de routage</h1>
+      <Header />
+      <div>
+        <h1>Questionnaire 🧮 test de routage</h1>
+      </div>
     </div>
+    
   )
 }
 

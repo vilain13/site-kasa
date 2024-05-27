@@ -1,0 +1,64 @@
+@import '../../styles/main.scss';
+
+.collapse-container {
+    display:flex;
+    width:($primary-width);
+    flex-direction: column;
+    max-width: 1023px;
+    margin: 38px auto;
+}
+   
+.collapse-container-title {
+    display: flex;
+    background-color: ($second-color);
+    color: ($primary-color);
+    justify-content: space-between;
+    padding:10px;
+    border-radius:5px;
+  
+    &__title {
+        margin: 0;
+        font-size: 18px;
+        font-weight:700;
+
+    }
+
+      img{
+          cursor:pointer;
+      }
+    
+    &__text {
+        font-size: 14px;
+        font-weight:500;
+        padding:10px;
+        margin:5px 0;
+        color: ($black-color);
+        background-color: ($third-color);
+    }
+}
+
+
+
+
+/**  MEDIA QUERIES **/
+
+@media (max-width: 550px) {
+
+    .collapse-container {
+        width:($second-width);
+        margin: 20px auto;
+    }
+
+    .collapse-container-title {
+        padding:10px;
+      
+        &__title {
+            font-size: 13px;
+        }
+    
+        &__text {
+            font-size: 13px;
+        }
+    }
+
+}

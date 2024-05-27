@@ -1,3 +1,34 @@
-h1 {
-    color:blue;
-}
+//** Animation de la fleche d'ouverture et fermeture Collapse.
+
+.arrow {
+    transition: transform 0.3s ease;
+    transform-origin: center;
+  }
+  
+  .arrow-up {
+    transform: rotate(180deg); /* Flèche vers le haut par défaut */
+  }
+  
+  .arrow-down {
+    transform: rotate(0deg); /* Flèche vers le bas pour indiquer que l'élément est ouvert */
+  }
+
+
+  //** Animation fadein  item  Collapse.
+  .fade-in {
+    animation: fadeIn 0.5s ease forwards;
+    opacity: 0;
+  }
+  
+
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(-10px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  

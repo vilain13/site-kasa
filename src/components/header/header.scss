@@ -1,0 +1,56 @@
+@import '../../styles/main.scss';
+
+.header {
+    display:flex;
+    justify-content: space-between;
+    width:($primary-width);
+    margin: auto;
+    margin-top:45px;
+    
+    &__nav {
+        &__list {
+            display:flex;
+            gap:57px;
+            justify-content: flex-end;
+
+            &__item {
+                font-size:24px;
+                font-weight:500;
+                color:$black-color;      
+                
+                &__link {
+                    text-decoration: none;
+                    color:($black-color);
+                }
+            }
+        }
+    }
+}
+
+.activ-link {
+    border-bottom: solid 1px;
+}
+
+/**  MEDIA QUERIES **/
+
+@media (max-width: 550px) {
+    .header {
+        margin-top:20px;
+        width:($second-width);
+
+        img{
+            width:145px;
+            height:50px;
+        }
+        
+        &__nav {
+            &__list {
+                gap:26px;
+                &__item {
+                    font-size:12px;
+                }
+            }
+        }
+    }
+
+}

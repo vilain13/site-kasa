@@ -1,0 +1,35 @@
+@import '../../styles/main.scss';
+
+.footer {
+    display: flex;
+    flex-direction: column;
+    justify-content:flex-end;
+    align-items:center;
+    background-color: ($black-color);
+    gap:30px;
+    height:209px;
+    width:100%;
+
+    &__copyright {
+        font-size:24px;
+        font-weight:500;
+        color: ($primary-color);
+        text-align:center;
+    }
+}
+
+
+/**  MEDIA QUERIES **/
+
+@media (max-width: 550px) {
+    .footer {
+        justify-content:center;
+        gap:0;
+        &__copyright {
+            width:100px;
+            font-size: 12px;
+        }
+    }
+   
+
+}

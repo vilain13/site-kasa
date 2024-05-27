@@ -1,17 +1,17 @@
 @import "./main.scss";
 
-@import "./pages/home.scss";
+@import "../pages/home/home.scss";
 
-@import "./components/header.scss";
+@import "../components/header/header.scss";
 
-@import "./components/footer.scss";
+@import "../components/footer/footer.scss";
 
-@import "./pages/apropos.scss";
+@import "../pages/apropos/apropos.scss";
 
-@import "./pages/e404.scss";
+@import "../pages/e404/e404.scss";
 
-@import "./pages/logement.scss";
+@import "../pages/logement/logement.scss";
 
-@import "./mediaqueries.scss";
+@import "../components/collapse/collapse.scss";
 
 @import "./animations.scss";

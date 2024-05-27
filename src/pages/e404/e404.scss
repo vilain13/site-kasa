@@ -1,0 +1,57 @@
+@import '../../styles/main.scss';
+
+
+.e404 {
+    display: flex;
+    flex-direction:column;
+    gap:139px;
+    text-align:center;
+    width: ($primary-width);
+    margin: 139px auto;
+    color: ($second-color);
+
+    &__title {
+        margin:0;
+        line-height: 263px;
+        font-size: 288px;
+        font-weight: 700;
+    }
+
+    &__text {
+        margin:0;
+        font-size: 36px;
+        font-weight: 500;
+    }
+
+    &__link {
+        font-size:18px;
+        font-weight:500;
+        color:($black-color);
+    }
+}
+
+
+/**  MEDIA QUERIES **/
+
+@media (max-width: 550px) {
+    .e404 {
+        margin: 113px auto;
+        gap:113px;
+
+        &__title {
+            line-height: 137px;
+            font-size: 96px;
+        }
+    
+        &__text {
+            font-size: 18px;
+        }
+    
+        &__link {
+            font-size:14px;
+            font-weight:500;
+        }
+
+    }
+   
+}

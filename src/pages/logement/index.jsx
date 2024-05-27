@@ -1,16 +1,12 @@
 import Header from '../../components/header';
 import Footer from '../../components/footer';
-import Banner from '../../components/banner';
-import GalleryCards from '../../components/gallery-cards';
 
-
-function Home() {
+function Logement() {
   return (
     <div className="App">
       
       <Header />
-      <Banner />
-      <GalleryCards />
+   
       <Footer />
 
   
@@ -18,4 +14,4 @@ function Home() {
   );
 }
 
-export default Home;
+export default Logement;

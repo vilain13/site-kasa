@@ -1,0 +1,106 @@
+@import '../../styles/main.scss';
+
+.gallery-cards {
+  
+    display:flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: ($primary-width);
+    padding:50px 0;
+    margin:auto;
+    margin-top:45px;
+    margin-bottom:50px;
+    gap:50px;
+    background-color: ($third-color);
+    border-radius:25px;
+
+    &__card {
+        position:relative;
+        width:27%;
+        height: 340px;
+        border-radius:10px;
+        overflow:hidden;
+        cursor: pointer;
+     
+
+    h3 {
+        position:absolute;
+        left:20px;
+        bottom: 20px;
+        display: inline-block;
+        max-width: 165px;
+        white-space: normal;
+        word-break: break-word;
+        z-index:10; 
+    }
+    
+    img{
+        position:absolute;
+        width:100%;
+        height:340px;
+        object-fit:cover;
+        object-position:center;
+    }
+
+    &::after {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.5) 100%); /* dégradé foncé  vert le bas*/
+        border-radius: 10px;
+    }
+
+    }
+}
+
+
+
+
+@media (max-width: 1265px) {
+
+    .gallery-cards {
+        justify-content: center;
+        &__card {
+            width: 42%;
+        }
+    }
+
+
+}
+
+
+
+@media (max-width: 768px) {
+
+    .gallery-cards {
+        justify-content: center;
+        &__card {
+            width:  80%;
+        }
+    }
+
+
+}
+
+/**  MEDIA QUERIES **/
+
+@media (max-width: 550px) {
+
+    .gallery-cards {
+        width:($second-width);
+        justify-content: center;
+        padding:0;
+        margin-top:22px;
+        margin-bottom: 27px;
+        gap:20px;
+        &__card {
+            width:  100%;
+            height: 255px;
+        }
+    }
+
+
+}
