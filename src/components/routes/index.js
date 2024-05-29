@@ -12,13 +12,12 @@ function Routage() {
             <Routes>
                 <Route path="/" element={<Home />} />
                 <Route path="/apropos" element={<Apropos />} />
-                <Route path="/logement/" element={<Logement />} />  {/* prendre en compte l'id du logement dans l'url */}
+                <Route path="/logement/:id" element={<Logement/>} />  {/* prendre en compte l'id du logement dans l'url */}
                 {/* Route pour définir la page à afficher si le chemin saisi sans l'url n'est pas défini au dessus */}
                 <Route path="*" element={<E404 />} />
             </Routes>
          </Router>
     )
-
 }
  
 export default Routage

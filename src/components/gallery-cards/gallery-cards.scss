@@ -5,9 +5,7 @@
     display:flex;
     flex-wrap: wrap;
     justify-content: center;
-    width: ($primary-width);
     padding:50px 0;
-    margin:auto;
     margin-top:45px;
     margin-bottom:50px;
     gap:50px;
@@ -90,7 +88,6 @@
 @media (max-width: 550px) {
 
     .gallery-cards {
-        width:($second-width);
         justify-content: center;
         padding:0;
         margin-top:22px;

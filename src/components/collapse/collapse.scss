@@ -2,7 +2,6 @@
 
 .collapse-container {
     display:flex;
-    width:($primary-width);
     flex-direction: column;
     max-width: 1023px;
     margin: 38px auto;
@@ -45,8 +44,7 @@
 @media (max-width: 550px) {
 
     .collapse-container {
-        width:($second-width);
-        margin: 20px auto;
+        margin: 10px auto;
     }
 
     .collapse-container-title {

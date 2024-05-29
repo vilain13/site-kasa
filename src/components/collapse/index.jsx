@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import aproposList from '../../datas/aproposList.json';
 import upArrow from '../../assets/up-arrow.png';
 
 
@@ -26,14 +25,25 @@ const Collapse = ({ title, content }) => {
           />
         </div>
         {isOpen && (
-          <p className={`collapse-container-title__text ${isOpen ? 'fade-in' : null}`}>
-            {content}
-          </p>
+            <div className={`collapse-container-title__text ${isOpen ? 'fade-in' : ''}`}>
+            {Array.isArray(content) ? (
+              <ul>
+                {content.map((item, index) => (
+                  <li key={index}>{item}</li>
+                ))}
+              </ul>
+            ) : (
+              <p>{content}</p>
+            )}
+          </div>
         )}
       </div>
     );
   };
 
+  export default Collapse
+  
+/*
   const AppCollapse = () => {
     return (
       <div className="apropos-container">
@@ -44,4 +54,4 @@ const Collapse = ({ title, content }) => {
     );
   };
 
-  export default AppCollapse
+  export default AppCollapse */

@@ -2,6 +2,9 @@ import Header from '../../components/header';
 import Footer from '../../components/footer';
 import Banner from '../../components/banner';
 import GalleryCards from '../../components/gallery-cards';
+import imgBanner from '../../assets/home-banner.png'
+
+const titleBanner ="Chez vous, partout et ailleurs"
 
 
 function Home() {
@@ -9,8 +12,10 @@ function Home() {
     <div className="App">
       
       <Header />
-      <Banner />
-      <GalleryCards />
+      <div className='main-container'>
+        <Banner  img={imgBanner} title={titleBanner}  />
+        <GalleryCards />
+      </div>
       <Footer />
 
   
