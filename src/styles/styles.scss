@@ -1,4 +1,4 @@
-@import "./main.scss";
+@use './main.scss';
 
 @import "../pages/home/home.scss";
 
@@ -6,14 +6,24 @@
 
 @import "../components/footer/footer.scss";
 
+@import "../components/banner/banner";
+
+@import "../components/gallery-cards/gallery-cards.scss";
+
 @import "../pages/apropos/apropos.scss";
 
 @import "../pages/e404/e404.scss";
 
 @import "../pages/logement/logement.scss";
 
+@import "../components/logement-tags/logement-tags.scss";
+
+@import "../components/logement-rating/logement-rating.scss";
+
 @import "../components/slider/slider.scss";
 
 @import "../components/collapse/collapse.scss";
 
 @import "./animations.scss";
+
+

@@ -1,0 +1,32 @@
+@import '../../styles/main.scss';
+
+.star-rating {
+    display:flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap:4px;
+    width:196px;
+    height: 32px;
+
+    .star{
+        width:36px;
+        height: 36px;
+    }
+}
+
+
+/**  MEDIA QUERIES **/
+
+@media (max-width: 550px) {
+    .star-rating {
+        gap: 2px;
+        width:75px;
+        height: 18px;
+    
+
+        .star{
+            width:13px;
+            height: 13px;
+        }
+    }
+}

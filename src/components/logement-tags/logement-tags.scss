@@ -1,0 +1,42 @@
+@import '../../styles/main.scss';
+
+.tags {
+    display:flex;
+    align-content: center;
+    justify-content: flex-start;
+    gap:10px;
+    height: 25px;
+    margin-top: 20px;
+
+    button {
+        background-color: $second-color;
+        color:$primary-color;
+        font-size:14px;
+        font-weight:700;
+        border-radius:10px;
+        border:none;
+    }
+}
+
+
+/**  MEDIA QUERIES **/
+
+@media (max-width: 650px) {
+
+    .tags {
+        margin-top: 10px;
+       button{
+        font-size:11px;
+       }
+    }
+}
+
+@media (max-width: 550px) {
+    .tags {
+        height: 18px;
+    
+        button {
+            font-size:10px;
+        }
+    }
+}

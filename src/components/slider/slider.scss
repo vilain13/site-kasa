@@ -12,12 +12,14 @@
         position:absolute;
         left:25px;
         top:157px;
+        cursor:pointer;
     }
     .slider-img{
         width:100%;
         height:415px;
         border-radius:25px;
         object-fit:cover;
+       
     }
 
     .arrow-right {
@@ -26,6 +28,7 @@
         position:absolute;
         right:25px;
         top:157px;
+        cursor:pointer;
     }
 }
 
@@ -34,6 +37,7 @@
 
 @media (max-width: 550px) {
     .slider-container {
+        margin-top: 27px;
 
         .arrow-left {
             width:24px;
@@ -42,6 +46,7 @@
             left:4px;
 
         }
+
         .slider-img {
             height:255px;
         }
@@ -51,7 +56,6 @@
             height:24px;
             top:118px;
             right:4px;
-
         }
     }
 

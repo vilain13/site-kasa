@@ -11,7 +11,7 @@ const Collapse = ({ title, content }) => {
     };
   
     return (
-      <div className='collapse-container'>
+      <div >
         <div className='collapse-container-title'>
           <h3 className="collapse-container-title__title">
             {title}
@@ -25,7 +25,7 @@ const Collapse = ({ title, content }) => {
           />
         </div>
         {isOpen && (
-            <div className={`collapse-container-title__text ${isOpen ? 'fade-in' : ''}`}>
+          <div className={`collapse-container-title__text ${isOpen ? 'fade-in' : ''}`}>
             {Array.isArray(content) ? (
               <ul>
                 {content.map((item, index) => (
@@ -43,15 +43,3 @@ const Collapse = ({ title, content }) => {
 
   export default Collapse
   
-/*
-  const AppCollapse = () => {
-    return (
-      <div className="apropos-container">
-        {aproposList.map(item => (
-          <Collapse key={item.id} title={item.title} content={item.content} />
-        ))}
-      </div>
-    );
-  };
-
-  export default AppCollapse */

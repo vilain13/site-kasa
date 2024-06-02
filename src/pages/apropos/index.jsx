@@ -17,7 +17,7 @@ function Apropos() {
             <div className='main-container'>
                 <Banner  img={imgBanner} title={titleBanner}  />
             
-                <div className="apropos-container">
+                <div className="apropos-collapses">
                     {aproposList.map(item => (
                     <Collapse key={item.id} title={item.title} content={item.content} />
                     ))}

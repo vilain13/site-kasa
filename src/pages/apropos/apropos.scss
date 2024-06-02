@@ -1,0 +1,21 @@
+
+.apropos-collapses {
+    max-width:1023px;
+    display:flex;
+    flex-direction: column;
+    gap:30px;
+    margin:38px auto 38px auto;
+
+}
+
+
+/**  MEDIA QUERIES **/
+
+@media (max-width: 550px) {  
+
+    .apropos-collapses {
+        gap: 20px;
+        margin: 19px auto 19px auto;
+    }
+
+}

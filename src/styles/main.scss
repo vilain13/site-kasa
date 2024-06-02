@@ -1,6 +1,5 @@
 
 
-
 $primary-color : #ffffff;
 $second-color : #FF6060;
 $third-color : #F6F6F6;
@@ -9,12 +8,12 @@ $color-pelet:#C4C4C4;
 $black-color:black;
 
 $primary-width:86.11%;
-$second-width:94.5%;  
+$second-width:94.5%; 
 
 body {
   margin: 0;
   font-family: "Montserrat";
-  color:var($second-color);
+  color:$second-color;
 }
 
 .main-container {
@@ -37,6 +36,11 @@ h3 {
 ul {
   list-style:none;
   padding:0;
+  margin:0;
+}
+
+p {
+  margin:0;
 }
 
 
