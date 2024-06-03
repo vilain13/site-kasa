@@ -1,7 +1,7 @@
 import Header from '../../components/header';
 import Footer from '../../components/footer';
 import Banner from '../../components/banner';
-import  './apropos.scss'
+
 import Collapse from '../../components/collapse';
 
 import aproposList from '../../datas/aproposList.json';

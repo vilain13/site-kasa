@@ -1,4 +1,4 @@
-import  './gallery-cards.scss'
+
 import logementsDatas from '../../datas/logementsList.json';
 
 

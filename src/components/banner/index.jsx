@@ -2,7 +2,7 @@
 
 import { useLocation } from 'react-router-dom';  // afin de pouvoir appliquer une opacité différente à l'img banner de A propos ( condition sur la route de la paage ) 
 
-import  './banner.scss'
+
 
 
 function Banner({img, title}) { // lea accolades sont importantes pour récupérer les arguments au format d'array

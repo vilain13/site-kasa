@@ -1,5 +1,5 @@
 import React from 'react';
-import  './logement-rating.scss'
+
 import starValidImg from '../../assets/star-valid.png';
 import starInvalidImg from '../../assets/star-invalid.png';
 

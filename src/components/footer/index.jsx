@@ -1,4 +1,4 @@
-import  './footer.scss'
+
 import logoFooter from '../../assets/logo-white.png' /** passer par une variable pour que l'url relative commence par le repertoire src et non le repertoire public */
 
 function Footer() {

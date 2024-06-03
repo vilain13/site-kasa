@@ -1,5 +1,5 @@
-import React from 'react';
-import { useParams } from 'react-router-dom';
+import React, { useEffect } from 'react';
+import { useParams, useNavigate } from 'react-router-dom';
 
 import Header from '../../components/header';
 import Footer from '../../components/footer';
@@ -9,23 +9,27 @@ import StarsRatingContainer from '../../components/logement-rating';
 import TagButtons from '../../components/logement-tags';
 import logementsList from '../../datas/logementsList.json';
 
-import './logement.scss';
+
 
 
 function Logement() {
-
-  const { id } = useParams();
+  const { id } = useParams(); // récupère l'id de la page logement à afficher
+  const navigate = useNavigate();
   const logement = logementsList.find(item => item.id === id);
 
-  // Conversion de logement.rating en nombre pour comptage du nombre d'étoiles valides et non valides à afficher
-  const starValidCount = parseInt(logement.rating);
-  const starInvalidCount = 5 - starValidCount;
-
+  useEffect(() => {
+    if (!logement) {
+      navigate('/404');
+    }
+  }, [logement, navigate]);
 
   if (!logement) {
-      return <h2>Logement non trouvé</h2>;
+    return null; // Important Bonne pratique  car usefeffet avec navigate ne redirigera pas vers la page instantanément et se declenchera seulement après le premier rendu . cela elimine le risque d'afficher une page avec mauvaises données.
   }
-  
+
+  // Conversion de logement.rating en nombre 
+  const starValidCount = parseInt(logement.rating);
+  const starInvalidCount = 5 - starValidCount;
 
   return (
     <div>
@@ -69,7 +73,6 @@ function Logement() {
     </div>
   );
 }
-
 
 export default Logement
 
