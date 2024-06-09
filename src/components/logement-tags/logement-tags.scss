@@ -1,12 +1,12 @@
-@import '../../styles/main.scss';
+
 
 .tags {
     display:flex;
     align-content: center;
     justify-content: flex-start;
     gap:10px;
-    height: 25px;
-    margin-top: 20px;
+    margin-top: 25px;
+    flex-wrap:wrap;  /** pour assurer le bon affichage des boutons au delà de 4 tags sans modifier la taille police ou largeur boutons **/
 
     button {
         background-color: $second-color;
@@ -15,28 +15,24 @@
         font-weight:700;
         border-radius:10px;
         border:none;
+        width:115px;
+        min-height:25px;
     }
 }
 
 
 /**  MEDIA QUERIES **/
 
-@media (max-width: 650px) {
+@media (max-width: 768px) {
 
     .tags {
         margin-top: 10px;
+       /** height: 18px; /**   suppression pour essai **/
        button{
         font-size:11px;
+        width:84px;
+        font-size:10px;
        }
     }
 }
 
-@media (max-width: 550px) {
-    .tags {
-        height: 18px;
-    
-        button {
-            font-size:10px;
-        }
-    }
-}

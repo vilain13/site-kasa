@@ -4,7 +4,7 @@ import logoHeader from '../../assets/logo-black.png'
 function Header() {
     const currentRoute=window.location.pathname; // sert à appliquer le style ( classe activ-link ) supplementaire si le lien de nav est actif
     return (
-        <div className='header'>
+        <header className='header'>
             <img src= {logoHeader} alt="logo Kasa location d'appartements" />
             <nav className="header__nav">
                 <ul className="header__nav__list">
@@ -16,7 +16,7 @@ function Header() {
                     </li>
                 </ul>
             </nav>
-         </div>
+         </header>
         
     )
 }

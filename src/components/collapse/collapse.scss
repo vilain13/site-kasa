@@ -1,4 +1,4 @@
-@import '../../styles/main.scss';
+
 
 
 
@@ -30,8 +30,8 @@
       }
     
     &__text {
-        font-size: 14px;
-        font-weight:500;
+        font-size: 18px;
+        font-weight:400;
         padding:10px;
         margin:5px 0;
         color: ($black-color);
@@ -44,7 +44,7 @@
 
 /**  MEDIA QUERIES **/
 
-@media (max-width: 550px) {
+@media (max-width: 768px) {
 
 
 
@@ -56,7 +56,8 @@
         }
     
         &__text {
-            font-size: 13px;
+            font-size: 12px;
+            font-weight: 400;
         }
     }
 

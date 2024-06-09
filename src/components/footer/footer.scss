@@ -1,4 +1,4 @@
-@import '../../styles/main.scss';
+
 
 .footer {
     display: flex;
@@ -21,15 +21,13 @@
 
 /**  MEDIA QUERIES **/
 
-@media (max-width: 550px) {
+@media (max-width: 768px) {
     .footer {
         justify-content:center;
-        gap:0;
+        gap:8px;
         &__copyright {
             width:100px;
             font-size: 12px;
         }
     }
-   
-
 }

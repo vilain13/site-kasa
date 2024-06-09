@@ -14,7 +14,7 @@ function Apropos() {
         <div>
             <Header />
 
-            <div className='main-container'>
+            <main className='main-container'>
                 <Banner  img={imgBanner} title={titleBanner}  />
             
                 <div className="apropos-collapses">
@@ -22,7 +22,7 @@ function Apropos() {
                     <Collapse key={item.id} title={item.title} content={item.content} />
                     ))}
                 </div>
-            </div>
+            </main>
 
             <Footer />
 

@@ -12,12 +12,11 @@ function Home() {
     <div className="App">
       
       <Header />
-      <div className='main-container'>
+      <main className='main-container'>
         <Banner  img={imgBanner} title={titleBanner}  />
         <GalleryCards />
-      </div>
+      </main>
       <Footer />
-
   
     </div>
   );

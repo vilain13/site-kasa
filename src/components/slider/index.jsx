@@ -23,12 +23,28 @@ function Slider({ pictures }) {
   
     return (
         <div className='slider-container'>
-             <img className='arrow-left' src= {arrowLeft} alt="flêche vers la gauche"  onClick={handlePrevious} />
-             <img className='slider-img' src={pictures[currentIndex]} alt={`Logement ${currentIndex + 1}`} />
-             <img className='arrow-right' src= {arrowRight} alt="flêche vers la droite" onClick={handleNext} />
+             {/* Test sur le nombre d'img à afficher pour le logement si 1 img disparition des fleches de direction et du compteur slider */}
+
+            {pictures.length > 1 && ( 
+                <div>
+                    <img className='arrow-left' src= {arrowLeft} alt="flêche vers la gauche"  onClick={handlePrevious} />
+                    <img className='arrow-right' src= {arrowRight} alt="flêche vers la droite" onClick={handleNext} />
+                </div>
+            )}
+            <img className='slider-img' src={pictures[currentIndex]} alt={`Logement ${currentIndex + 1}`} />
+            
+            {pictures.length > 1 && ( 
+                <div className='img-count'>
+                    {currentIndex + 1} / {pictures.length}
+                </div>
+            )}
+      
         </div>
-    )
+
+    ); 
 }
+
+
 
 
 export default Slider

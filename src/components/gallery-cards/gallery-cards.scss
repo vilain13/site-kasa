@@ -1,4 +1,4 @@
-@import '../../styles/main.scss';
+
 
 .gallery-cards {
   
@@ -65,23 +65,10 @@
             width: 42%;
         }
     }
-
-
 }
+
 
 @media (max-width: 768px) {
-
-    .gallery-cards {
-        justify-content: center;
-        &__card {
-            width:  80%;
-        }
-    }
-
-
-}
-
-@media (max-width: 550px) {
 
     .gallery-cards {
         justify-content: center;
@@ -94,6 +81,4 @@
             height: 255px;
         }
     }
-
-
-}
+} 

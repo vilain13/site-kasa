@@ -1,4 +1,4 @@
-@import '../../styles/main.scss';
+
 
 
 .slider-container {
@@ -11,7 +11,8 @@
         height:79px;
         position:absolute;
         left:25px;
-        top:157px;
+        top: 50%;
+        transform: translateY(-50%);
         cursor:pointer;
     }
     .slider-img{
@@ -19,7 +20,6 @@
         height:415px;
         border-radius:25px;
         object-fit:cover;
-       
     }
 
     .arrow-right {
@@ -27,15 +27,26 @@
         height:79px;
         position:absolute;
         right:25px;
-        top:157px;
+        top: 50%;
+        transform: translateY(-50%);
         cursor:pointer;
+    }
+
+    .img-count {
+        position: absolute;
+        bottom: 25px;
+        left: 50%;
+        transform: translate(-50%);
+        color: $primary-color;
+        font-size: 18px;
+        font-weight: 500;
     }
 }
 
 
 /**  MEDIA QUERIES **/
 
-@media (max-width: 550px) {
+@media (max-width: 768px) {
     .slider-container {
         margin-top: 27px;
 
@@ -44,7 +55,6 @@
             height:24px;
             top:118px;
             left:4px;
-
         }
 
         .slider-img {
@@ -58,5 +68,4 @@
             right:4px;
         }
     }
-
 }

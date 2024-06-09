@@ -1,4 +1,4 @@
-@import '../../styles/main.scss';
+
 
 .star-rating {
     display:flex;
@@ -6,7 +6,7 @@
     justify-content: flex-end;
     gap:4px;
     width:196px;
-    height: 32px;
+    height: 36px;
 
     .star{
         width:36px;
@@ -17,13 +17,13 @@
 
 /**  MEDIA QUERIES **/
 
-@media (max-width: 550px) {
+@media (max-width: 768px) {
     .star-rating {
         gap: 2px;
         width:75px;
         height: 18px;
+        justify-content: flex-start;
     
-
         .star{
             width:13px;
             height: 13px;

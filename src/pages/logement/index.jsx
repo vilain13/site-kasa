@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 
 import Header from '../../components/header';
@@ -11,32 +11,31 @@ import logementsList from '../../datas/logementsList.json';
 
 
 
-
 function Logement() {
   const { id } = useParams(); // récupère l'id de la page logement à afficher
-  const navigate = useNavigate();
-  const logement = logementsList.find(item => item.id === id);
-
+  const navigate = useNavigate();   // Hook useNavigate pour redirection vers une autre page
+ 
+  const [logement, setLogement] = useState()
+  const [startValidCount, setStartValidCount] = useState(0)
+  
+  // s'execute lorsque id logement ou navigate changent
   useEffect(() => {
-    if (!logement) {
-      navigate('/404');
+    let _logement = logementsList.find(item => item.id === id);
+    if (!_logement) {
+      return navigate('/404');
     }
-  }, [logement, navigate]);
+    setLogement(_logement)   // mise à jour des elements du logement selectionné
+    setStartValidCount(parseInt(_logement.rating,10))   // Conversion de logement.rating issu du json en nombre 
+  }, [id, navigate]); 
 
-  if (!logement) {
-    return null; // Important Bonne pratique  car usefeffet avec navigate ne redirigera pas vers la page instantanément et se declenchera seulement après le premier rendu . cela elimine le risque d'afficher une page avec mauvaises données.
-  }
 
-  // Conversion de logement.rating en nombre 
-  const starValidCount = parseInt(logement.rating);
-  const starInvalidCount = 5 - starValidCount;
 
   return (
     <div>
       
       <Header />
-    
-      <div className="main-container">
+      {/* Si le logement est défini, affiche le contenu  */}
+      {logement && <main className="main-container">
 
         <Slider pictures={logement.pictures} />
 
@@ -52,9 +51,9 @@ function Logement() {
           <div className='host-rating-container'>
             <div className="host">
               <h3>{logement.host.name}</h3>
-              <img src={logement.host.picture} alt='{logement.host.name}' />
+              <img src={logement.host.picture} alt={`Votre Hote ${logement.host.name}`} />
             </div>
-            <StarsRatingContainer starValidCount={starValidCount} starInvalidCount={starInvalidCount} />
+            <StarsRatingContainer starValidCount={startValidCount} starInvalidCount={5-startValidCount} />
           </div>
         </div>
 
@@ -67,7 +66,7 @@ function Logement() {
           </div>
 
         </div>
-      </div>
+      </main>}
 
       <Footer />
     </div>

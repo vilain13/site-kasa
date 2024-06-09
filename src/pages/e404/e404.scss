@@ -1,4 +1,4 @@
-@import '../../styles/main.scss';
+
 
 
 .e404 {
@@ -33,7 +33,7 @@
 
 /**  MEDIA QUERIES **/
 
-@media (max-width: 550px) {
+@media (max-width: 768px) {
     .e404 {
         margin: 113px auto;
         gap:113px;

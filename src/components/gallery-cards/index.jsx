@@ -1,17 +1,11 @@
 
-import logementsDatas from '../../datas/logementsList.json';
+import logements from '../../datas/logementsList.json';
 
 
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import { Link } from 'react-router-dom';
 
 const GalleryCards = () => {
-    const [logements, setLogements] = useState([]);
-
-    useEffect(() => {
-      // Charge les données JSON depuis le fichier d'import mis dans "logementsDatas"
-      setLogements(logementsDatas);
-    }, []);
 
   return (
     
